@@ -53,6 +53,23 @@ public class Product {
     protected Product() {
     }
 
+    // Build a new product with the category found by the service.
+    public Product(
+            String sku,
+            String name,
+            Category category,
+            ProductUnit unit,
+            BigDecimal sellingPrice,
+            BigDecimal reorderLevel
+    ) {
+        this.sku = sku;
+        this.name = name;
+        this.category = category;
+        this.unit = unit;
+        this.sellingPrice = sellingPrice;
+        this.reorderLevel = reorderLevel;
+    }
+
     // Expose the product fields used to build the API response.
     public Long getId() {
         return id;
